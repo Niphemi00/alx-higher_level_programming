@@ -1,14 +1,6 @@
-const args = process.argv.slice(2);
-
-if (args.length < 1) {
-    console.log("Please provide at least one argument.");
+#!/usr/bin/node
+if (isNaN(process.argv[2]) || process.argv[2] === undefined) {
+  console.log('Not a number');
 } else {
-    const firstArg = args[0];
-    const number = parseInt(firstArg, 10);
-
-    if (isNaN(number)) {
-        console.log("Not a number");
-    } else {
-        console.log(`My number: ${number}`);
-    }
+  console.log('My number:', parseInt(process.argv[2]));
 }
